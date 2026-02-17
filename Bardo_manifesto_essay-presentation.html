@@ -44,7 +44,8 @@
       --space-md: 1rem;
       --space-lg: 1.5rem;
       --space-xl: 2.5rem;
-      --space-2xl: 4rem;
+      --space-2xl: 5rem;
+      --space-3xl: 7rem;
 
       --transition-fast: 150ms ease;
       --transition-default: 200ms ease;
@@ -72,9 +73,9 @@
 
     /* ─── GLOBAL CONTAINER ─── */
     .container {
-      max-width: 1400px;
+      max-width: 1440px;
       margin: 0 auto;
-      padding: 0 10%;
+      padding: 0 12%;
       width: 100%;
     }
 
@@ -85,31 +86,31 @@
     h3 { font-size: 1.25rem; font-weight: 600; }
 
     .section-label {
-      font-size: 0.875rem;
+      font-size: 0.9375rem;
       color: var(--accent);
       text-transform: uppercase;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.14em;
       font-weight: 600;
-      margin-bottom: var(--space-sm);
+      margin-bottom: var(--space-md);
     }
 
     /* Gap between intro paragraph and "Why this gap exists" headline */
     #essay-intro .intro-text .essay-body + .section-label {
-      margin-top: var(--space-xl);
+      margin-top: var(--space-2xl);
     }
 
     /* ─── SECTION SPACING ─── */
     section {
-      padding: var(--space-2xl) 0;
+      padding: var(--space-3xl) 0;
       min-height: 100vh;
       display: flex;
       align-items: center;
     }
 
-    /* First text section: compact so it doesn't dominate */
+    /* First text section: generous padding */
     #essay-intro {
-      padding: var(--space-lg) 0 var(--space-xl) 0;
-      padding-top: var(--space-lg);
+      padding: var(--space-3xl) 0 var(--space-2xl) 0;
+      padding-top: var(--space-2xl);
       min-height: auto;
     }
 
@@ -117,7 +118,7 @@
     #essay-part1,
     #essay-part2,
     #essay-conclusion {
-      padding: var(--space-2xl) 0;
+      padding: var(--space-3xl) 0;
       min-height: auto;
     }
 
@@ -272,8 +273,8 @@
       min-height: auto;
       display: flex;
       flex-direction: column;
-      padding-top: max(env(safe-area-inset-top), 16vh);
-      padding-bottom: var(--space-xl);
+      padding-top: max(env(safe-area-inset-top), 18vh);
+      padding-bottom: var(--space-2xl);
       justify-content: flex-start;
       position: relative;
     }
@@ -288,7 +289,7 @@
       align-items: center;
       justify-content: center;
       gap: var(--space-xl);
-      margin-bottom: var(--space-2xl);
+      margin-bottom: var(--space-3xl);
     }
 
     .hero-logo {
@@ -315,20 +316,21 @@
 
     /* Divider lines */
     .hero-divider {
-      width: 80px;
+      width: 100px;
       height: 1px;
       background: linear-gradient(90deg, transparent, var(--accent), transparent);
-      margin: var(--space-lg) auto;
+      margin: var(--space-xl) auto;
     }
 
     /* Title */
     .hero-title {
-      font-size: 2.75rem;
+      font-size: 3.25rem;
       font-weight: 700;
       color: var(--text-primary);
-      line-height: 1.15;
-      margin: 0 auto var(--space-xs);
-      max-width: 800px;
+      line-height: 1.12;
+      margin: 0 auto var(--space-sm);
+      max-width: 820px;
+      letter-spacing: -0.02em;
     }
 
     .hero-type {
@@ -336,17 +338,17 @@
       font-weight: 500;
       color: var(--accent);
       text-transform: uppercase;
-      letter-spacing: 0.12em;
-      margin: 0 auto var(--space-lg);
+      letter-spacing: 0.14em;
+      margin: 0 auto var(--space-xl);
     }
 
     /* Subtitle / intro */
     .hero-subtitle {
-      font-size: 1.0625rem;
+      font-size: 1.125rem;
       color: var(--text-secondary);
-      max-width: 680px;
-      margin: 0 auto var(--space-lg);
-      line-height: 1.7;
+      max-width: 720px;
+      margin: 0 auto var(--space-xl);
+      line-height: 1.75;
     }
 
     .hero-subtitle strong {
@@ -385,7 +387,7 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: var(--space-xl);
-      padding-top: var(--space-xl);
+      padding-top: var(--space-2xl);
       max-width: 700px;
       margin: 0 auto;
     }
@@ -405,7 +407,7 @@
       align-items: center;
       justify-content: center;
       gap: 6px;
-      margin-top: var(--space-2xl);
+      margin-top: var(--space-3xl);
       font-size: 0.75rem;
       color: var(--text-muted);
       letter-spacing: 0.06em;
@@ -1252,20 +1254,20 @@
        ═══════════════════════════════════ */
     #essay-intro .container {
       max-width: 100%;
-      padding-left: 10%;
+      padding-left: 12%;
       padding-right: 0;
     }
 
     #essay-intro .intro-layout {
       display: grid;
-      grid-template-columns: minmax(0, 720px) 1fr;
-      gap: 0;
+      grid-template-columns: minmax(0, 760px) 1fr;
+      gap: var(--space-2xl);
       align-items: stretch;
-      min-height: 65vh;
+      min-height: 70vh;
     }
 
     #essay-intro .intro-text {
-      padding-right: var(--space-2xl);
+      padding-right: var(--space-3xl);
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -1274,9 +1276,8 @@
     #essay-intro .intro-visual {
       position: relative;
       overflow: hidden;
-      margin-right: calc(-1 * (100vw - 100%) / 2);
-      margin-right: -10vw;
-      min-height: 65vh;
+      margin-right: -8vw;
+      min-height: 70vh;
     }
 
     #essay-intro .intro-visual::before {
@@ -1293,8 +1294,8 @@
     #essay-intro .intro-visual video {
       width: 100%;
       height: 100%;
-      min-height: 65vh;
-      max-height: 1100px;
+      min-height: 70vh;
+      max-height: 1200px;
       object-fit: cover;
       object-position: center center;
       display: block;
@@ -1306,20 +1307,20 @@
        ═══════════════════════════════════ */
     #essay-part2 .container {
       max-width: 100%;
-      padding-left: 10%;
+      padding-left: 12%;
       padding-right: 0;
     }
 
     #essay-part2 .part2-layout {
       display: grid;
-      grid-template-columns: minmax(0, 720px) 1fr;
-      gap: 0;
+      grid-template-columns: minmax(0, 760px) 1fr;
+      gap: var(--space-2xl);
       align-items: stretch;
-      min-height: 60vh;
+      min-height: 65vh;
     }
 
     #essay-part2 .part2-text {
-      padding-right: var(--space-2xl);
+      padding-right: var(--space-3xl);
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -1328,7 +1329,7 @@
     #essay-part2 .part2-visual {
       position: relative;
       overflow: hidden;
-      margin-right: -10vw;
+      margin-right: -8vw;
     }
 
     #essay-part2 .part2-visual::before {
@@ -1355,10 +1356,10 @@
        ═══════════════════════════════════ */
     .essay-body {
       color: var(--text-secondary);
-      max-width: 720px;
-      font-size: 1.125rem;
-      line-height: 1.8;
-      margin-top: var(--space-md);
+      max-width: 760px;
+      font-size: 1.1875rem;
+      line-height: 1.85;
+      margin-top: var(--space-lg);
     }
 
     .essay-body p {
@@ -1371,23 +1372,23 @@
 
     /* More space between subsections (e.g. Why Stockholm vs Why Bardo in part2) */
     .part2-text .essay-body + .section-label {
-      margin-top: var(--space-2xl);
+      margin-top: var(--space-3xl);
     }
 
     .part2-text .section-label + .essay-body {
-      margin-top: var(--space-sm);
+      margin-top: var(--space-md);
     }
 
     .essay-subhead {
-      font-size: 1.125rem;
+      font-size: 1.1875rem;
       font-weight: 600;
       color: var(--accent);
-      margin-top: var(--space-xl);
-      margin-bottom: var(--space-sm);
+      margin-top: var(--space-2xl);
+      margin-bottom: var(--space-md);
     }
 
     .writer-section {
-      padding: var(--space-2xl) 0;
+      padding: var(--space-3xl) 0;
       min-height: auto;
     }
 
@@ -1462,8 +1463,8 @@
       position: relative;
       z-index: 2;
       text-align: center;
-      max-width: 800px;
-      padding: var(--space-2xl);
+      max-width: 840px;
+      padding: var(--space-3xl);
     }
 
     /* Logo reveal */
@@ -1492,7 +1493,7 @@
       color: var(--text-muted);
       font-size: 1.25rem;
       letter-spacing: 0.08em;
-      margin-top: var(--space-lg);
+      margin-top: var(--space-xl);
     }
 
     .epic-closing.revealed .epic-tagline {
@@ -1505,7 +1506,7 @@
       width: 0;
       height: 1px;
       background: linear-gradient(90deg, transparent, var(--accent), transparent);
-      margin: var(--space-xl) auto;
+      margin: var(--space-2xl) auto;
       transition: width 1s ease 0.8s;
     }
 
@@ -1526,11 +1527,12 @@
     }
 
     .epic-statement h2 {
-      font-size: 1.75rem;
+      font-size: 2rem;
       font-weight: 700;
       color: var(--text-primary);
       line-height: 1.3;
-      margin-bottom: var(--space-md);
+      margin-bottom: var(--space-lg);
+      letter-spacing: -0.02em;
     }
 
     .epic-statement h2 span {
@@ -1539,18 +1541,18 @@
 
     .epic-statement p {
       color: var(--text-muted);
-      font-size: 1rem;
-      line-height: 1.7;
-      max-width: 550px;
+      font-size: 1.0625rem;
+      line-height: 1.75;
+      max-width: 580px;
       margin: 0 auto;
     }
 
     /* Final stats */
     .epic-stats {
       display: flex;
-      gap: var(--space-2xl);
+      gap: var(--space-3xl);
       justify-content: center;
-      margin-top: var(--space-xl);
+      margin-top: var(--space-2xl);
       opacity: 0;
       transform: translateY(20px);
       transition: opacity 0.8s ease 1.5s, transform 0.8s ease 1.5s;
@@ -1737,7 +1739,7 @@
 
     <!-- One-liner intro -->
     <p class="hero-subtitle fade-in fade-in-delay-2">
-      Trillions flow toward sustainability every year. Almost nobody can prove what that money actually does. I know because I've sat across from over 200 executives, analysed thousands of sustainability reports, and delivered line-by-line emissions calculations to some of Sweden's biggest businesses.
+      <em>Trillions flow toward sustainability, but almost nobody can prove what that money actually does.</em> That gap isn't just an inefficiency. It's the thing holding the entire transition back.
     </p>
 
     <!-- Meta -->
@@ -1766,9 +1768,6 @@
   <div class="container">
     <div class="intro-layout">
       <div class="intro-text">
-        <div class="essay-body fade-in fade-in-delay-1">
-          <p><em>Trillions flow toward sustainability, but almost nobody can prove what that money actually does.</em> That gap isn't just an inefficiency. It's the thing holding the entire transition back.</p>
-        </div>
         <div class="section-label fade-in visible">Why this gap exists</div>
         <div class="essay-body fade-in fade-in-delay-1">
           <p>It's tempting to point fingers. Just 36 fossil fuel companies are responsible for half the world's carbon emissions.</p>
